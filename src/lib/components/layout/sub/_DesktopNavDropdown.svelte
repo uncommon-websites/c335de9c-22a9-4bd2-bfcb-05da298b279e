@@ -1,29 +1,36 @@
 <script lang="ts">
-  // Types
-  import type { NavItem } from '$lib/navigation';
-  // Components
-  import { NavigationMenu } from 'bits-ui';
-  // Using simple chevron instead of icon import
+	// Types
+	import type { NavItem } from "$lib/navigation";
+	// Components
+	import { NavigationMenu } from "bits-ui";
 
-  // Props
-  let { item }: { item: NavItem } = $props();
+	// Props
+	let { item }: { item: NavItem } = $props();
 
-  // State
-  let activeImageIndex = $state(0);
-  // Determine if any children have images
-  let hasImages = $derived((item.children ?? []).some(child => !!child.image));
+	// State
+	let activeImageIndex = $state(0);
+	// Determine if any children have images
+	let hasImages = $derived((item.children ?? []).some((child) => !!child.image));
 
-  function setActiveImageIndex(index: number) {
-    activeImageIndex = index;
-  }
+	function setActiveImageIndex(index: number) {
+		activeImageIndex = index;
+	}
 </script>
 
 <NavigationMenu.Trigger class="group/item inline-flex h-full items-center gap-1">
 	{item.label}
-	<span
-		class="relative top-[1px] size-3 opacity-80 transition duration-200 ease-out group-hover/item:opacity-100 group-data-[state=open]:rotate-180 "
+	<svg
+		class="relative top-[1px] size-3 opacity-80 transition duration-200 ease-out group-hover/item:opacity-100 group-data-[state=open]:rotate-180"
 		aria-hidden="true"
-	>▼</span>
+		viewBox="0 0 24 24"
+		fill="none"
+		stroke="currentColor"
+		stroke-width="2"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+	>
+		<path d="m6 9 6 6 6-6" />
+	</svg>
 </NavigationMenu.Trigger>
 
 <NavigationMenu.Content

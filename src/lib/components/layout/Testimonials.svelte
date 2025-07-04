@@ -1,11 +1,14 @@
 <script lang="ts">
 	// Types
 	type Testimonial = {
-		name: string;
-		position: string;
-		company: string;
+		name?: string;
+		author?: string;
+		position?: string;
+		role?: string;
+		company?: string;
 		quote: string;
-		image: string; // a 9/16 portrait image of a person
+		image?: string; // a 9/16 portrait image of a person
+		imageSrc?: string;
 	};
 
 	// Props
@@ -23,10 +26,11 @@
 	onMount(() => {
 		// Preload images
 		testimonials.forEach((testimonial) => {
-			if (testimonial.image) {
+			const imageSrc = testimonial.image || testimonial.imageSrc;
+			if (imageSrc) {
 				const img = new Image();
 				img.loading = "lazy";
-				img.src = testimonial.image;
+				img.src = imageSrc;
 			}
 		});
 
@@ -154,10 +158,10 @@
 					style:transform="translateX(calc(-{scrollProgress} * {maxScrollDistance}px))"
 				>
 					<div class="hidden overflow-clip rounded-[max(var(--inner-radius),2px)] lg:block">
-						{#if testimonial.image}
+						{#if testimonial.image || testimonial.imageSrc}
 							<img
-								src={testimonial.image}
-								alt="{testimonial.name} testimonial"
+								src={testimonial.image || testimonial.imageSrc}
+								alt="{testimonial.name || testimonial.author} testimonial"
 								loading="lazy"
 								class="aspect-[3/4] h-full w-full object-cover"
 							/>
@@ -166,18 +170,18 @@
 					<div class="flex flex-col justify-between gap-12">
 						<q class="text-title2 max-w-prose">{testimonial.quote}</q>
 						<cite class="text-caption flex items-center gap-3 not-italic">
-							{#if testimonial.image}
+							{#if testimonial.image || testimonial.imageSrc}
 								<img
-									src={testimonial.image}
-									alt="{testimonial.name} testimonial"
+									src={testimonial.image || testimonial.imageSrc}
+									alt="{testimonial.name || testimonial.author} testimonial"
 									loading="lazy"
 									class="size-12 rounded-full object-cover lg:hidden"
 								/>
 							{/if}
 							<div>
-								<p class="text-callout">{testimonial.name}</p>
+								<p class="text-callout">{testimonial.name || testimonial.author}</p>
 								<p class="text-muted-foreground">
-									{testimonial.position}, {testimonial.company}
+									{testimonial.position || testimonial.role}{#if testimonial.company}, {testimonial.company}{/if}
 								</p>
 							</div>
 						</cite>
