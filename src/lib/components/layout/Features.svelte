@@ -7,7 +7,7 @@
 	type Feature = {
 		title: string;
 		description: string;
-		icon?: ComponentType;
+		icon?: ComponentType | string;
 		iconClass?: string;
 		imageSrc?: string;
 		imageAspect?: "16/9" | "9/16";

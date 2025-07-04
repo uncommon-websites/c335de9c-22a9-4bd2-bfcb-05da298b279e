@@ -1,9 +1,8 @@
-# Task: Replace Use Cases with New Ones for Envel
+# Task: Change to Different Hero
 
-- [x] Generate 3 new use cases that fit Envel's rapid product development business
-- [x] Generate images for each new use case (3:4 aspect ratio)
-- [x] Remove existing use cases and replace with new ones
-- [x] Update navigation.ts with new use cases and images
-- [x] Update home page (+page.svelte) with new use cases and remove generating prop
-- [x] Verify all syntax is correct and old use cases are completely removed
-- [ ] Final design system compliance check - verify design system classes prioritized over Tailwind, NO shadows, NO custom CSS, NO arbitrary values, check theme.css, app.css and typography.css
+- [x] Explore available hero components in the codebase
+- [x] Select appropriate alternative hero component (Hero.svelte - provides CTA buttons and better layout)
+- [x] Update import statement in +page.svelte
+- [x] Update hero component usage with existing content
+- [x] Test that new hero displays correctly
+- [x] Final design system compliance check - verified Hero component uses design system classes (text-display, text-headline, color variables), no shadows, no custom CSS, no arbitrary values

@@ -7,13 +7,23 @@
 	import CallToAction from "$lib/components/layout/CallToAction.svelte";
 	import AboutTeaser from "$lib/components/layout/AboutTeaser.svelte";
 	import LogoScroller from "$lib/components/layout/LogoScroller.svelte";
-	import CenteredTextOnlyHero from "$lib/components/layout/hero-sections/CenteredTextOnlyHero.svelte";
+	import Hero from "$lib/components/layout/hero-sections/Hero.svelte";
 </script>
 
-<CenteredTextOnlyHero
+<Hero
 	title="From idea to product. Fast."
 	subtitle="We help early-stage teams design, build, and ship real products in days—not months."
 	imageSrc="/generated/image-a-cozy-coffee-shop-with-customers-enjoyi.webp"
+	callsToAction={[
+		{
+			href: "/contact",
+			label: "Join waitlist"
+		},
+		{
+			href: "/about",
+			label: "Learn more"
+		}
+	]}
 />
 <LogoScroller 
 	label="Trusted by innovative companies" 

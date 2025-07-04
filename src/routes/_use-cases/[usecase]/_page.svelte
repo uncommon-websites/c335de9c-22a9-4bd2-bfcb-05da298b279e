@@ -14,22 +14,30 @@
 	const { data }: { data: PageData } = $props();
 </script>
 
+{#if data.hero}
 <Hero
 	title={data.hero.title}
 	subtitle={data.hero.subtitle}
 	imageSrc={data.hero.imageSrc}
 	callsToAction={data.hero.callsToAction}
 />
+{/if}
 
+{#if data.summary}
 <Summary title={data.summary.title} text={data.summary.text} />
+{/if}
 
+{#if data.testimonials}
 <Testimonials testimonials={data.testimonials} />
+{/if}
 
+{#if data.features}
 <Features
 	title={data.features.title}
 	subtitle={data.features.subtitle}
 	features={data.features.items}
 />
+{/if}
 
 {#if data.cta}
 	<CallToAction
