@@ -27,98 +27,104 @@
 
 <Summary
 	title="What we do"
-	text="Our technology delivers measurable results through secure, adaptable solutions that directly increase productivity and drive growth."
+	text="Envel designs, implements, and ships early-stage products rapidly, transforming your ideas into market-ready solutions. We specialize in accelerating product development from months to days for startups and innovators. Our comprehensive approach covers everything from design to deployment, helping you validate concepts and reach market faster."
 />
 
 <Testimonials
 	testimonials={[
 		{
-			name: "Jane Smith",
-			position: "CTO",
-			company: "Tech Innovations",
+			name: "Keiko Landa",
+			position: "Co-founder",
+			company: "Arrayloop",
 			quote:
-				"Their cutting-edge automation boosted our productivity by 35%.\nThe intuitive interface reduced training time and improved team adoption.",
-			image:
-				"https://images.unsplash.com/photo-1571513722275-4b41940f54b8?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+				"Envel turned a months-long roadmap into a live product in under a week. Our MVP was built, polished, and in customer hands before some teams finish discovery. That kind of acceleration changed everything for us.",
+			image: "/generated/image-a-professional-woman-stands-confidently-.webp"
 		},
 		{
-			name: "John Doe",
-			position: "Director of Operations",
-			company: "Global Solutions",
+			name: "Omar Petrov",
+			position: "Founder",
+			company: "MetricBay",
 			quote:
-				"Their robust security protocols gave us confidence in handling sensitive data.\nThe 24/7 support team resolved issues within hours, not days.",
-			image:
-				"https://images.unsplash.com/photo-1600603405959-6d623e92445c?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+				"With Envel, we were able to go from idea to real-world validation in five days. That speed helped us test assumptions and avoid pouring six months into the wrong direction. It de-risked our startup early—massively.",
+			image: "/generated/image-a-professional-man-is-sitting-on-a-downt.webp"
 		},
 		{
-			name: "Sarah Johnson",
-			position: "Product Manager",
-			company: "Future Systems",
+			name: "ClareShawnellis Vega",
+			position: "Owner",
+			company: "Reclaim Accounting",
 			quote:
-				"The scalable platform grew seamlessly with our business needs.\nTheir customization options allowed us to tailor solutions perfectly to our workflows.",
-			image:
-				"https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+				"We saved tens of thousands by not hiring a full team. Envel handled everything from product design to deployment—and did it in under a week. What we got would've taken agencies two months and four invoices.",
+			image: "/generated/image-a-professional-woman-is-working-in-her-h.webp"
 		}
 	]}
 />
 
 <Features
-	title="Features"
-	subtitle="Some features"
+	title="Why choose Envel"
+	subtitle="Accelerated development that doesn't compromise on quality"
 	features={[
 		{
-			title: "Streamlined Workflows",
+			title: "Lightning fast delivery",
 			description:
-				"Automate repetitive tasks and connect systems to improve productivity with our industry-leading 87% time savings."
+				"Transform your product ideas into shipping-ready solutions in days, not months through our streamlined development process."
 		},
 		{
-			title: "Data Analysis",
+			title: "Quality-first approach",
 			description:
-				"Extract meaningful insights from your data with powerful analytical tools backed by proprietary AI algorithms that are 3x more accurate than competitors."
+				"Every product we ship meets rigorous quality standards while maintaining the speed you need to stay competitive."
 		},
 		{
-			title: "Secure Collaboration",
+			title: "End-to-end development",
 			description:
-				"Work together seamlessly while maintaining strict data privacy standards with our zero-knowledge architecture and military-grade encryption."
+				"From initial design concepts to final implementation and deployment, we handle your entire product development lifecycle."
+		},
+		{
+			title: "Early-stage expertise",
+			description:
+				"Purpose-built for startups and entrepreneurs who need to validate ideas quickly and iterate based on real user feedback."
+		},
+		{
+			title: "Proven methodology",
+			description:
+				"Our battle-tested process eliminates typical development bottlenecks that slow down traditional agencies and in-house teams."
+		},
+		{
+			title: "Immediate availability",
+			description:
+				"Join our waitlist to access rapid product development services designed specifically for time-sensitive early-stage ventures."
 		}
 	]}
 />
 
 <UseCases
 	title="Use Cases"
-	subtitle="Real-world applications for your business needs"
+	subtitle="Real-world applications for rapid product development"
 	useCases={[
 		{
-			title: "Streamlined Workflows",
-			description:
-				"Automate repetitive tasks and connect systems to improve productivity with our industry-leading 87% time savings.",
-			image:
-				"https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+			title: "From concept to prototype",
+			description: "Transform your initial idea into a working prototype in days. Skip months of planning and get straight to testing with real users to validate your concept.",
+			image: "/generated/image-a-group-of-startup-entrepreneurs-engaged.webp",
 			link: {
-				href: "/use-cases/workflows",
+				href: "/use-cases/concept-to-prototype",
 				label: "Learn more"
 			}
 		},
 		{
-			title: "Data Analysis",
-			description:
-				"Extract meaningful insights from your data with powerful analytical tools backed by proprietary AI algorithms that are 3x more accurate than competitors.",
-			image:
-				"https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2488&q=80",
+			title: "Accelerate market entry",
+			description: "Beat competitors to market with rapid product development. Launch your product while others are still in the planning phase and capture first-mover advantage.",
+			image: "/generated/image-a-product-team-in-an-office-environment-.webp",
 			link: {
-				href: "/use-cases/data-analysis",
-				label: "Explore analytics"
+				href: "/use-cases/accelerate-market-entry",
+				label: "Learn more"
 			}
 		},
 		{
-			title: "Secure Collaboration",
-			description:
-				"Work together seamlessly while maintaining strict data privacy standards with our zero-knowledge architecture and military-grade encryption.",
-			image:
-				"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+			title: "Build and iterate quickly",
+			description: "Ship your first version fast, then improve based on real user feedback. Our rapid development cycles let you evolve your product at market speed.",
+			image: "/generated/image-developers-in-a-collaborative-workspace-.webp",
 			link: {
-				href: "/use-cases/collaboration",
-				label: "See security features"
+				href: "/use-cases/build-and-iterate-quickly",
+				label: "Learn more"
 			}
 		}
 	]}

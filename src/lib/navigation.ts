@@ -60,7 +60,37 @@ export const navigation: NavItem[] = [
 		showInNav: true,
 		showInFooter: false
 	},
-
+	{
+		label: "Use Cases",
+		showInNav: true,
+		showInFooter: true,
+		children: [
+			{
+				label: "From concept to prototype",
+				href: "/use-cases/concept-to-prototype",
+				image: "/generated/image-a-group-of-startup-entrepreneurs-engaged.webp",
+				description: "Transform your initial idea into a working prototype in days. Skip months of planning and get straight to testing with real users to validate your concept.",
+				showInNav: true,
+				showInFooter: true
+			},
+			{
+				label: "Accelerate market entry",
+				href: "/use-cases/accelerate-market-entry",
+				image: "/generated/image-a-product-team-in-an-office-environment-.webp",
+				description: "Beat competitors to market with rapid product development. Launch your product while others are still in the planning phase and capture first-mover advantage.",
+				showInNav: true,
+				showInFooter: true
+			},
+			{
+				label: "Build and iterate quickly",
+				href: "/use-cases/build-and-iterate-quickly",
+				image: "/generated/image-developers-in-a-collaborative-workspace-.webp",
+				description: "Ship your first version fast, then improve based on real user feedback. Our rapid development cycles let you evolve your product at market speed.",
+				showInNav: true,
+				showInFooter: true
+			}
+		]
+	},
 	{
 		label: "Company",
 		showInNav: true,
@@ -103,7 +133,6 @@ export const navigation: NavItem[] = [
 				showInNav: false,
 				showInFooter: true
 			}
-			// Social media might be handled differently, not typically a nav item
 		]
 	}
 ];

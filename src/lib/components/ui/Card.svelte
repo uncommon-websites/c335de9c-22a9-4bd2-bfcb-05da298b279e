@@ -4,7 +4,7 @@
 	interface Props {
 		title?: string;
 		description?: string;
-		icon?: ComponentType;
+		icon?: ComponentType | string;
 		iconClass?: string;
 		imageSrc?: string;
 		imageAspect?: "16/9" | "9/16";
@@ -28,7 +28,6 @@
 	{#if icon || imageSrc}
 		<div class="mb-8">
 			{#if icon && imageSrc}
-				{@const Icon = icon}
 				<div class="relative">
 					<img
 						src={imageSrc}
@@ -40,16 +39,27 @@
 						class="absolute top-3 left-3 bg-white/90 p-1.5 backdrop-blur-sm"
 						style="border-radius: max(2px, calc(var(--radius) - 1.25rem));"
 					>
-						<Icon
-							class="size-4 {iconClass.includes('text-')
+						{#if typeof icon === 'string'}
+							<span class="size-4 {iconClass.includes('text-')
 								? iconClass.split(' ').find((c) => c.startsWith('text-'))
-								: 'text-primary'}"
-						/>
+								: 'text-primary'}">{icon}</span>
+						{:else}
+							{@const Icon = icon}
+							<Icon
+								class="size-4 {iconClass.includes('text-')
+									? iconClass.split(' ').find((c) => c.startsWith('text-'))
+									: 'text-primary'}"
+							/>
+						{/if}
 					</div>
 				</div>
 			{:else if icon}
-				{@const Icon = icon}
-				<Icon class={iconClass} />
+				{#if typeof icon === 'string'}
+					<span class={iconClass}>{icon}</span>
+				{:else}
+					{@const Icon = icon}
+					<Icon class={iconClass} />
+				{/if}
 			{:else if imageSrc}
 				<img
 					src={imageSrc}

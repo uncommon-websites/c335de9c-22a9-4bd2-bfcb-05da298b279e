@@ -3,12 +3,12 @@
 	import Card from "$lib/components/ui/Card.svelte";
 	import Features from "$lib/components/layout/Features.svelte";
 
-	// Icons
-	import IconZap from "~icons/lucide/zap";
-	import IconShield from "~icons/lucide/shield";
-	import IconUsers from "~icons/lucide/users";
-	import IconSettings from "~icons/lucide/settings";
-	import IconPalette from "~icons/lucide/palette";
+	// Icons - using simple text icons instead of icon imports
+	const IconZap = "⚡";
+	const IconShield = "🛡️";
+	const IconUsers = "👥";
+	const IconSettings = "⚙️";
+	const IconPalette = "🎨";
 
 	// Theme controls
 	let themeRadius = $state(8); // 0.5rem = 8px
@@ -37,7 +37,7 @@
 	<!-- Theme Controls -->
 	<div class="fixed top-4 right-4 z-50">
 		<Button variant="secondary" size="sm" onclick={() => (showControls = !showControls)}>
-			<IconSettings class="size-4" />
+			<span class="size-4">{IconSettings}</span>
 		</Button>
 
 		{#if showControls}
@@ -45,14 +45,15 @@
 				class="bg-card border-border absolute top-12 right-0 w-80 space-y-4 rounded-lg border p-4 shadow-lg"
 			>
 				<div class="mb-4 flex items-center gap-2">
-					<IconPalette class="text-primary size-4" />
+					<span class="text-primary size-4">{IconPalette}</span>
 					<h3 class="text-headline font-medium">Theme Controls</h3>
 				</div>
 
 				<!-- Radius Control -->
 				<div class="space-y-2">
-					<label class="text-sm font-medium">Border Radius: {themeRadius}px</label>
+					<label for="radius-control" class="text-sm font-medium">Border Radius: {themeRadius}px</label>
 					<input
+						id="radius-control"
 						type="range"
 						min="0"
 						max="24"
@@ -63,8 +64,9 @@
 
 				<!-- Primary Color Hue -->
 				<div class="space-y-2">
-					<label class="text-sm font-medium">Primary Hue: {primaryHue}°</label>
+					<label for="hue-control" class="text-sm font-medium">Primary Hue: {primaryHue}°</label>
 					<input
+						id="hue-control"
 						type="range"
 						min="0"
 						max="360"
@@ -75,8 +77,9 @@
 
 				<!-- Background Shade -->
 				<div class="space-y-2">
-					<label class="text-sm font-medium">Background: Gray-{backgroundShade}</label>
+					<label for="background-control" class="text-sm font-medium">Background: Gray-{backgroundShade}</label>
 					<select
+						id="background-control"
 						bind:value={backgroundShade}
 						class="border-border bg-background text-foreground w-full rounded border p-2"
 					>
@@ -370,7 +373,6 @@
 				{
 					title: "AI-powered insights",
 					description: "Get intelligent recommendations powered by machine learning algorithms.",
-					icon: IconZap,
 					imageSrc:
 						"https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
 				}
@@ -384,8 +386,7 @@
 			features={[
 				{
 					title: "Lightning fast",
-					description: "Built for speed with optimized performance and caching.",
-					icon: IconZap
+					description: "Built for speed with optimized performance and caching."
 				},
 				{
 					title: "Global infrastructure",
@@ -404,14 +405,12 @@
 				{
 					title: "Bank-level security",
 					description: "Your data is protected with enterprise-grade encryption.",
-					icon: IconShield,
 					imageSrc:
 						"https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
 				},
 				{
 					title: "Team collaboration",
-					description: "Work together seamlessly with real-time tools.",
-					icon: IconUsers
+					description: "Work together seamlessly with real-time tools."
 				},
 				{
 					title: "Analytics dashboard",
