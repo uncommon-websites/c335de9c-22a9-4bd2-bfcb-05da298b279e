@@ -28,10 +28,10 @@
 <LogoScroller 
 	label="Trusted by innovative companies" 
 	logoUrls={[
-		'https://logo.clearbit.com/canva.com',
-		'https://logo.clearbit.com/notion.so',
-		'https://logo.clearbit.com/stripe.com',
-		'https://logo.clearbit.com/figma.com'
+		'https://cdn.brandfetch.io/canva.com/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7',
+		'https://cdn.brandfetch.io/notion.so/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7',
+		'https://cdn.brandfetch.io/stripe.com/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7',
+		'https://cdn.brandfetch.io/figma.com/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7'
 	]} 
 />
 

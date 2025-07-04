@@ -1,8 +1,7 @@
 // Types
 import { CONFIG } from "$lib/content";
-import type { LayoutServerLoad } from "./$types";
 
-export const load: LayoutServerLoad = async () => {
+export const load = async () => {
 	return {
 		meta: {
 			title: CONFIG.companyName,

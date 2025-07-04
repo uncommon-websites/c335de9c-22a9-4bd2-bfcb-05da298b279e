@@ -1,8 +1,8 @@
-# Task: Change to Different Hero
+# Task: Change Logo Scroller to Brandfetch Logos
 
-- [x] Explore available hero components in the codebase
-- [x] Select appropriate alternative hero component (Hero.svelte - provides CTA buttons and better layout)
-- [x] Update import statement in +page.svelte
-- [x] Update hero component usage with existing content
-- [x] Test that new hero displays correctly
-- [x] Final design system compliance check - verified Hero component uses design system classes (text-display, text-headline, color variables), no shadows, no custom CSS, no arbitrary values
+- [x] Find and examine current logo scroller component
+- [x] Identify current logos being used
+- [x] Get Brandfetch logos for the companies
+- [x] Update component to use new Brandfetch logos
+- [x] Test that logos display correctly
+- [x] Final design system compliance check - verified LogoScroller uses design system classes where applicable, no shadows, minimal necessary custom CSS for mask-image effect, no arbitrary values. Updated logos from Clearbit to Brandfetch successfully.
